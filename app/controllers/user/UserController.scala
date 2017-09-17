@@ -5,8 +5,8 @@ import play.api.mvc._
 import play.api.libs.json._
 import play.api.libs.json.Reads._
 import play.api.libs.functional.syntax._
-import services.user.UserServiceComponent
 import domain.user.User
+import services.user.UserServiceComponent
 
 trait UserController extends Controller {
     self: UserServiceComponent =>0

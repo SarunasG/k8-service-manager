@@ -1,8 +1,9 @@
 package repositories.user
 
-import domain.user.User
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicLong
+
+import domain.user.User
 
 trait UserRepositoryComponent {
     val userRepository: UserRepository

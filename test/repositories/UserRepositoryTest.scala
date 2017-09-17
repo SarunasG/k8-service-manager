@@ -1,8 +1,9 @@
-package repositories.user
+package repositories
 
 import org.junit.Test
 import org.junit.Assert._
 import domain.user.User
+import repositories.user.UserRepositoryComponentImpl
 
 class UserRepositoryTest extends UserRepositoryComponentImpl {
     
