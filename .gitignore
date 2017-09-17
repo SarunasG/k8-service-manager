@@ -16,3 +16,6 @@ dist
 /.cache
 /RUNNING_PID
 /.settings
+*.class
+*.log
+
