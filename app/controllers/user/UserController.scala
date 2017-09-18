@@ -6,10 +6,16 @@ import play.api.libs.json._
 import play.api.libs.json.Reads._
 import play.api.libs.functional.syntax._
 import domain.user.User
-import services.user.UserServiceComponent
+import repositories.user.UserRepositoryComponentImpl
+import services.user.{UserServiceComponent, UserServiceComponentImpl}
 
-trait UserController extends Controller {
+class UserController extends Controller with UserServiceComponentImpl
+  with UserRepositoryComponentImpl{
     self: UserServiceComponent =>0
+
+    def index = Action {
+        Ok(views.html.index("Your new application is ready."))
+    }
 
     def emailAlreadyExists(implicit reads: Reads[String]) =
         Reads[String](js => reads.reads(js).flatMap { e =>

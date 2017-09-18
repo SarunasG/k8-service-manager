@@ -6,12 +6,12 @@ import controllers.user.UserController
 import repositories.user.UserRepositoryComponentImpl
 import services.user.UserServiceComponentImpl
 
-object Application extends UserController
+object Application extends Controller
                    with UserServiceComponentImpl
                    with UserRepositoryComponentImpl {
 
-  def index = Action {
+/*   def index = Action {
     Ok(views.html.index("Your new application is ready."))
-  }
+  }*/
 
 }
